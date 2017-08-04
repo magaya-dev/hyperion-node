@@ -1,0 +1,22 @@
+{
+  "name": "hyperion-node",
+  "version": "0.0.1",
+  "description": "Hyperion project to be used with node.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magaya-dev/hyperion-node.git"
+  },
+  "keywords": [
+    "hyperion"
+  ],
+  "author": "Magaya Corporation",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/magaya-dev/hyperion-node/issues"
+  },
+  "homepage": "https://github.com/magaya-dev/hyperion-node#readme"
+}
