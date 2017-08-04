@@ -1,6 +1,3 @@
-module.exports.StreamDocument = StreamDocumentAsync;
-module.exports.StreamAttachment = StreamAttachmentAsync;
-
 class StreamAsync {
     constructor(retriever, resource) {
         this.retriever = retriever;
@@ -44,3 +41,6 @@ class StreamDocumentAsync extends StreamAsync  {
         super(asyncApi.getDocumentContentAsync, document);
     }
 }
+
+module.exports.StreamDocument = StreamDocumentAsync;
+module.exports.StreamAttachment = StreamAttachmentAsync;
