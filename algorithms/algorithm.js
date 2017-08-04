@@ -1,55 +1,5 @@
 const stream = require('./stream');
 
-module.exports = function (asyncApi) {
-    this.forEach = function (cursor) {
-        return new ForEachAsync(asyncApi, cursor);
-    };
-
-    this.transform = function (cursor) {
-        return new TransformAsync(asyncApi, cursor);
-    };
-
-    this.accumulate = function (cursor) {
-        return new AccumulateAsync(asyncApi, cursor);
-    };
-
-    this.anyOf = function (cursor) {
-        return new AnyOfAsync(asyncApi, cursor);
-    };
-
-    this.allOf = function (cursor) {
-        return new AllOfAsync(asyncApi, cursor);
-    };
-
-    this.noneOf = function (cursor) {
-        return new NoneOfAsync(asyncApi, cursor);
-    };
-
-    this.find = function (cursor) {
-        return new FindAsync(asyncApi, cursor);
-    };
-
-    this.findFirst = function (cursor) {
-        return new FindAsync(asyncApi, cursor).where(_ => true);
-    };
-
-    this.collect = function (cursor) {
-        return new CollectAsync(asyncApi, cursor);
-    };
-
-    this.select = function (cursor, count) {
-        return new SelectAsync(asyncApi, cursor, count);
-    };
-
-    this.streamAttachmentContent = function (attachment, writeStream) {
-        return new stream.StreamAttachment(asyncApi, attachment).stream(writeStream);
-    };
-
-    this.streamDocumentContent = function (document, writeStream) {
-        return new stream.StreamDocument(asyncApi, document).stream(writeStream);
-    }
-};
-
 class AsyncBase {
     constructor(asyncApi, cursor) {
         this.async = asyncApi;
@@ -238,3 +188,53 @@ class SelectAsync extends AsyncBase {
         });
     }
 }
+
+module.exports = function (asyncApi) {
+    this.forEach = function (cursor) {
+        return new ForEachAsync(asyncApi, cursor);
+    };
+
+    this.transform = function (cursor) {
+        return new TransformAsync(asyncApi, cursor);
+    };
+
+    this.accumulate = function (cursor) {
+        return new AccumulateAsync(asyncApi, cursor);
+    };
+
+    this.anyOf = function (cursor) {
+        return new AnyOfAsync(asyncApi, cursor);
+    };
+
+    this.allOf = function (cursor) {
+        return new AllOfAsync(asyncApi, cursor);
+    };
+
+    this.noneOf = function (cursor) {
+        return new NoneOfAsync(asyncApi, cursor);
+    };
+
+    this.find = function (cursor) {
+        return new FindAsync(asyncApi, cursor);
+    };
+
+    this.findFirst = function (cursor) {
+        return new FindAsync(asyncApi, cursor).where(_ => true);
+    };
+
+    this.collect = function (cursor) {
+        return new CollectAsync(asyncApi, cursor);
+    };
+
+    this.select = function (cursor, count) {
+        return new SelectAsync(asyncApi, cursor, count);
+    };
+
+    this.streamAttachmentContent = function (attachment, writeStream) {
+        return new stream.StreamAttachment(asyncApi, attachment).stream(writeStream);
+    };
+
+    this.streamDocumentContent = function (document, writeStream) {
+        return new stream.StreamDocument(asyncApi, document).stream(writeStream);
+    }
+};
