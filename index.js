@@ -1,4 +1,5 @@
-const addon = require('./bin/hyperion');
+const os = require('os');
+const addon = require(`./bin/${os.arch()}/hyperion`);
 const Algorithms = require('./algorithms/algorithm');
 
 module.exports = function({ name, argv }) {
