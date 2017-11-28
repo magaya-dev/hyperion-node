@@ -6,15 +6,15 @@ class StreamAsync {
 
     stream(writeStream) {    
         function writeChunk(resolve, writeStream, data, start) { 
-            let size = 4 * 1024; 
+            const size = 4 * 1024; 
 
             if (!data || start == data.length ) {
                 resolve();
                 return;
             }
 
-            let end = Math.min(start + size, data.length);
-            let buffer = data.slice(start, end);
+            const end = Math.min(start + size, data.length);
+            const buffer = data.slice(start, end);
 
             writeStream.write(buffer);
             process.nextTick(writeChunk, resolve, writeStream, data, end);
