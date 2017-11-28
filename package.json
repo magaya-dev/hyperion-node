@@ -1,6 +1,6 @@
 {
   "name": "hyperion-node",
-  "version": "0.790.3",
+  "version": "0.790.4",
   "description": "Hyperion project to be used with node.",
   "main": "index.js",
   "scripts": {
