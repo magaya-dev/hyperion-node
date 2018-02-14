@@ -28,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/magaya-dev/hyperion-node/issues"
   },
-  "homepage": "https://github.com/magaya-dev/hyperion-node#readme"
+  "homepage": "https://github.com/magaya-dev/hyperion-node#readme",
+  "dependencies": {
+    "@magaya/hyperion-algorithms": "^0.790.1"
+  }
 }
