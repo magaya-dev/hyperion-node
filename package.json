@@ -13,6 +13,9 @@
     "x86",
     "x64"
   ],
+  "engines": {
+    "node": "7.9.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/magaya-dev/hyperion-node.git"
@@ -21,7 +24,7 @@
     "hyperion"
   ],
   "author": "Magaya Corporation",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/magaya-dev/hyperion-node/issues"
   },
