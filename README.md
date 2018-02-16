@@ -4,7 +4,7 @@
 Project hosting hyperion which can be included in other node projects.
 
 ```js
-const hyperion = require('hyperion-node')('appName', argv);
+const hyperion = require('@magaya/hyperion-node')('appName', argv);
 
 // hyperion.algorithm   - access to algorithms
 // hyperion.connection  - access to raw hyperion connection
