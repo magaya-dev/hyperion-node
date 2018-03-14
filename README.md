@@ -4,8 +4,9 @@
 Project hosting hyperion which can be included in other node projects.
 
 ```js
-// process.argv needs to include an entry '--mag-config-file'
-const hyperion = require('@magaya/hyperion-node')('appName', process.argv);
+// process.argv needs to include an entry '--connection-string'
+// the second parameter is optional, can be requested with just argument array
+const hyperion = require('@magaya/hyperion-node')(process.argv, 'optionalApiName');
 
 // hyperion.algorithm   - access to algorithms
 // hyperion.connection  - access to raw hyperion connection
