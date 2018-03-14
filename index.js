@@ -6,9 +6,9 @@ const Algorithms = require('@magaya/hyperion-algorithms'); debug('Loaded Algorit
 /**
  * @typedef HyperionConnectionHandle
  * @type {object}
- * @property {object} algorithm - Namespace for algorithm functions.
- * @property {object} connection - Whole connection object
- * @property {object} dbx - Hyperion handle, contains transaciton namespaces.
+ * @property {object} algorithm Namespace for algorithm functions.
+ * @property {object} connection Whole connection object
+ * @property {object} dbx Hyperion handle, contains transaciton namespaces.
  */
 
 /**
@@ -16,15 +16,15 @@ const Algorithms = require('@magaya/hyperion-algorithms'); debug('Loaded Algorit
  * provides access to the databse is returned. Currently looking for --connection-string
  * in the list of provided arguments.
  * 
- * @param {string[]} argv - List of command line arguments for program.
- * @param {string} [api] - Optional name for requested api
+ * @param {string[]} argv List of command line arguments for program.
+ * @param {string} [api] Optional name for requested api
  * 
- * @returns {HyperionConnectionHandle} - Handle for hyperion connection.
+ * @returns {HyperionConnectionHandle} Handle for hyperion connection.
  */
 module.exports = function(argv, api) {
     debug(`Attempting to connect with: ${argv}`);
 
-    if (name) {
+    if (api) {
         debug(`Connecting with a request for ${api} api`)
     }
 
