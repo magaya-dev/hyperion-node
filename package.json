@@ -13,6 +13,10 @@
     "ia32",
     "x64"
   ],
+  "files": [
+    "/bin",
+    "index.js"
+  ],
   "engines": {
     "node": "7.9.0"
   },
