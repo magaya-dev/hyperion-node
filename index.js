@@ -21,7 +21,7 @@ const Algorithms = require('@magaya/hyperion-algorithms'); debug('Loaded Algorit
  * 
  * @returns {HyperionConnectionHandle} Handle for hyperion connection.
  */
-module.exports = function(argv, api) {
+module.exports = (argv, api) => {
     debug(`Attempting to connect with: ${argv}`);
 
     if (api) {
