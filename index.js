@@ -2,6 +2,7 @@ const debug = require('debug')('hyperion-addon');
 const os = require('os'); debug('Loaded os...');
 const addon = require(`./bin/${os.arch()}/hyperion`); debug('Loaded hyperion addon...');
 const Algorithms = require('@magaya/hyperion-algorithms'); debug('Loaded Algorithms...');
+const WriteAccess = require('@magaya/hyperion-write-access'); debug('Loaded WriteAccess...');
 
 /**
  * @typedef HyperionConnectionHandle
@@ -9,6 +10,7 @@ const Algorithms = require('@magaya/hyperion-algorithms'); debug('Loaded Algorit
  * @property {object} algorithm Namespace for algorithm functions.
  * @property {object} connection Whole connection object
  * @property {object} dbx Hyperion handle, contains transaciton namespaces.
+ * @property {object} dbw Namespace for databse update and saving functions.
  */
 
 /**
@@ -35,7 +37,8 @@ module.exports = (argv, api) => {
 
     return {
         algorithm: new Algorithms(connection.async),
-        connection: connection,
-        dbx: connection.hyperion
+        dbw: new WriteAccess(connection.async),
+        dbx: connection.hyperion,
+        connection: connection
     };
 };
