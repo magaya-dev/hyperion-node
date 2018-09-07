@@ -1,6 +1,6 @@
 {
-  "name": "hyperion-node",
-  "version": "0.790.4",
+  "name": "@magaya/hyperion-node",
+  "version": "11.2.2",
   "description": "Hyperion project to be used with node.",
   "main": "index.js",
   "scripts": {
@@ -10,9 +10,16 @@
     "win32"
   ],
   "cpu": [
-    "x86",
+    "ia32",
     "x64"
   ],
+  "files": [
+    "/bin",
+    "index.js"
+  ],
+  "engines": {
+    "node": "8.11.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/magaya-dev/hyperion-node.git"
@@ -21,9 +28,18 @@
     "hyperion"
   ],
   "author": "Magaya Corporation",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/magaya-dev/hyperion-node/issues"
   },
-  "homepage": "https://github.com/magaya-dev/hyperion-node#readme"
+  "homepage": "https://github.com/magaya-dev/hyperion-node#readme",
+  "dependencies": {
+    "@magaya/hyperion-algorithms": "^1.0.0",
+    "@magaya/hyperion-write-access": "^0.1.1",
+    "debug": "^3.1.0"
+  },
+  "devDependencies": {
+    "jasmine": "^3.1.0",
+    "mock-require": "^3.0.2"
+  }
 }
