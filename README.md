@@ -22,6 +22,7 @@ To get started provide the module with an *application name* and the list of *ap
 - algorithm
 - connection
 - dbx
+- dbw
 
 ---
 
