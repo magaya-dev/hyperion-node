@@ -33,7 +33,7 @@ module.exports = (argv, api) => {
     const connection = addon.connect(argv, api);
 
     debug('We connected...');
-    debug(`Hyperion defined: ${connection.hyperion !== undefined || connection.hyperion !== null}`);
+    debug(`Hyperion defined: ${connection.hyperion !== undefined && connection.hyperion !== null}`);
 
     return {
         algorithm: new Algorithms(connection.async),
