@@ -1,10 +1,10 @@
 {
     "name": "@magaya/hyperion-node",
-    "version": "11.3.30",
+    "version": "11.10.0",
     "description": "Hyperion project to be used with node.",
     "main": "index.js",
     "scripts": {
-      "postversion": "git push && git push --tags && npm publish --tag prerelease"
+        "postversion": "git push && git push --tags && npm publish --tag prerelease"
     },
     "os": [
         "win32"
