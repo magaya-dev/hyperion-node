@@ -1,6 +1,6 @@
 # Hyperion-Node - Gateway to Hyperion in Node
 
-## Get Started with Hyperion in Node
+## Intro
 Project hosting hyperion which can be included in other node projects.
 
 ```js
@@ -30,6 +30,15 @@ In development, you'll need to install the tools that are compatible with the ve
 
 ## Startup
 To get started provide the module with an *application name* and the list of *application parameters*.
+
+Starting with version 11.2 of Magaya, the second parameter can be an object, containing the unique identifier of the application connecting to the database and it's API Key, assigned during installation, for writting purposes.
+
+```js
+const hyperion = require('@magaya/hyperion-node')(process.argv, {
+    'clientId' : 'extension-example',
+    'apiKey' : '123456'
+});
+```
 
 ## Components
 - algorithm
