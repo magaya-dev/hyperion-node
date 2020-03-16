@@ -26,14 +26,33 @@ const WriteAccess = require('@magaya/hyperion-write-access'); debug('Loaded Writ
 module.exports = (argv, api) => {
     debug(`Attempting to connect with: ${argv}`);
 
+    const token_url = "http://localhost:5000/connect/token"; // !TODO(jose): handle this
+    const client_id = api && api.clientId ? api.clientId : api;
+
     if (api) {
-        debug(`Connecting with a request for ${api} api`)
+        debug(`Connecting with a request for ${client_id} api`)
+
+        if (api.clientId) {
+            api.tokenUrl = token_url;
+        }
     }
 
     const connection = addon.connect(argv, api);
 
     debug('We connected...');
     debug(`Hyperion defined: ${connection.hyperion !== undefined && connection.hyperion !== null}`);
+
+    if (api) {
+        // !NOTE(jose): promisify call to get access token
+        const api_obj = connection[client_id];
+        if (api_obj && api_obj.getAccessToken) {
+            const orginal = api_obj.getAccessToken;
+            api_obj.getAccessToken = () => new Promise((resolve, reject) => orginal(token_url, client_id, (err, token) => {
+                if (err) reject(err);
+                else resolve(token);
+            }));
+        }
+    }
 
     return {
         algorithm: new Algorithms(connection.async),
