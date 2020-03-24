@@ -1,6 +1,6 @@
 {
     "name": "@magaya/hyperion-node",
-    "version": "11.21.0",
+    "version": "11.22.0",
     "description": "Hyperion project to be used with node.",
     "main": "index.js",
     "scripts": {
