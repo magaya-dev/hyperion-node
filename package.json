@@ -4,7 +4,7 @@
     "description": "Hyperion project to be used with node.",
     "main": "index.js",
     "scripts": {
-        "postversion": "git push && git push --tags && npm publish --tag prerelease"
+        "postversion": "git push && git push --tags && npm publish --tag beta"
     },
     "os": [
         "win32"
