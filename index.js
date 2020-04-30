@@ -34,9 +34,8 @@ const WriteAccess = require('@magaya/hyperion-write-access'); debug('Loaded Writ
  */
 module.exports = (argv, api) => {
     debug(`Attempting to connect with: ${argv}`);
-
-    // TODO: Temporary URL for BETA
-    const token_url = "https://magaya-identity-web.azurewebsites.net/connect/token"; 
+    
+    const token_url = "https://identity.magaya.com/connect/token"; 
     const client_id = api && api.clientId ? api.clientId : api;
 
     if (api) {
