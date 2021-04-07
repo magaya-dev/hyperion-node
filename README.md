@@ -50,4 +50,3 @@ const hyperion = require('@magaya/hyperion-node')(process.argv, {
 ---
 
 ### Descriptions coming soon...
-
