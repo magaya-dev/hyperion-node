@@ -4,7 +4,8 @@
     "description": "Hyperion project to be used with node.",
     "main": "index.js",
     "scripts": {
-        "postversion": "git push && git push --tags && npm publish"
+        "postversion": "git push && git push --tags && npm publish",
+        "test": "jasmine"
     },
     "os": [
         "win32"
@@ -39,7 +40,7 @@
         "debug": "4.3.4"
     },
     "devDependencies": {
-        "jasmine": "5.1.0",
+        "jasmine": "4.6.0",
         "mock-require": "3.0.3"
     }
 }
