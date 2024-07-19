@@ -18,7 +18,7 @@
         "index.js"
     ],
     "engines": {
-        "node": "16.5.0"
+        "node": "20.14.0"
     },
     "repository": {
         "type": "git",
@@ -36,10 +36,10 @@
     "dependencies": {
         "@magaya/hyperion-algorithms": "^1.0.0",
         "@magaya/hyperion-write-access": "^0.1.1",
-        "debug": "^3.1.0"
+        "debug": "^4.3.5"
     },
     "devDependencies": {
-        "jasmine": "^3.1.0",
-        "mock-require": "^3.0.2"
+        "jasmine": "^5.1.0",
+        "mock-require": "^3.0.3"
     }
 }
