@@ -36,7 +36,7 @@
     "homepage": "https://github.com/magaya-dev/hyperion-node#readme",
     "dependencies": {
         "@magaya/hyperion-algorithms": "^1.0.0",
-        "@magaya/hyperion-write-access": "^0.1.1",
+        "@magaya/hyperion-write-access": "^0.2.0",
         "debug": "^4.3.5"
     },
     "devDependencies": {
