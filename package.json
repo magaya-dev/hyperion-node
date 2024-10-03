@@ -18,7 +18,7 @@
         "index.js"
     ],
     "engines": {
-        "node": "16.5.0"
+        "node": "20.3.0"
     },
     "repository": {
         "type": "git",
@@ -35,11 +35,11 @@
     "homepage": "https://github.com/magaya-dev/hyperion-node#readme",
     "dependencies": {
         "@magaya/hyperion-algorithms": "^1.0.0",
-        "@magaya/hyperion-write-access": "^0.1.1",
-        "debug": "^3.1.0"
+        "@magaya/hyperion-write-access": "^0.2.0",
+        "debug": "4.3.4"
     },
     "devDependencies": {
-        "jasmine": "^3.1.0",
-        "mock-require": "^3.0.2"
+        "jasmine": "4.6.0",
+        "mock-require": "3.0.3"
     }
 }
