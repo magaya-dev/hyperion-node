@@ -1,6 +1,6 @@
 {
     "name": "@magaya/hyperion-node",
-    "version": "12.52.6-blue-staging.0",
+    "version": "12.52.7-blue-staging.0",
     "description": "Hyperion project to be used with node.",
     "main": "index.js",
     "scripts": {
@@ -39,7 +39,7 @@
         "debug": "4.3.4"
     },
     "devDependencies": {
-       "jasmine": "4.6.0",
+        "jasmine": "4.6.0",
         "mock-require": "3.0.3"
     }
 }
