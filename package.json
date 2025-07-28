@@ -1,6 +1,6 @@
 {
     "name": "@magaya/hyperion-node",
-    "version": "11.62.1",
+    "version": "11.63.0",
     "description": "Hyperion project to be used with node.",
     "main": "index.js",
     "scripts": {
@@ -37,10 +37,10 @@
     "dependencies": {
         "@magaya/hyperion-algorithms": "^1.0.0",
         "@magaya/hyperion-write-access": "^0.1.1",
-        "debug": "^4.3.7"
+        "debug": "^4.4.0"
     },
     "devDependencies": {
-        "jasmine": "^5.3.1",
+        "jasmine": "^5.8.0",
         "mock-require": "^3.0.3"
     }
 }
