@@ -33,12 +33,12 @@
     },
     "homepage": "https://github.com/magaya-dev/hyperion-node#readme",
     "dependencies": {
-        "@magaya/hyperion-algorithms": "^1.0.0",
-        "@magaya/hyperion-write-access": "^0.2.0",
-        "debug": "4.3.4"
+        "@magaya/hyperion-algorithms": "~1.0.0",
+        "@magaya/hyperion-write-access": "~0.2.0",
+        "debug": "4.4.3"
     },
     "devDependencies": {
-        "jasmine": "4.6.0",
+        "jasmine": "5.13.0",
         "mock-require": "3.0.3"
     }
 }
